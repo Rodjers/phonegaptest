@@ -34,11 +34,11 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 
-console.log(JSON.stringify(this));
-console.log(JSON.stringify(cordova));
-var bluetoothSerial = cordova.require('bluetoothSerial');
+        // console.log(JSON.stringify(this));
+        // console.log(JSON.stringify(cordova));
+        var bluetoothSerial = cordova.require('bluetoothSerial');
 
-console.log(bluetooothSerial);
+        // console.log(bluetoothSerial);  
         bluetoothSerial.connect("", function(){alert("Success")}, function(){alert("Fail")});
         app.receivedEvent('deviceready');
     },
